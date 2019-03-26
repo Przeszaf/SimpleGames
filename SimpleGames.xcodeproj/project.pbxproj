@@ -12,6 +12,11 @@
 		C0786C3322493B3C008DDD99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0786C3122493B3C008DDD99 /* Main.storyboard */; };
 		C0786C3522493B3C008DDD99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0786C3422493B3C008DDD99 /* Assets.xcassets */; };
 		C0786C3822493B3C008DDD99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0786C3622493B3C008DDD99 /* LaunchScreen.storyboard */; };
+		C0786C4122493C9C008DDD99 /* TikTakToeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0786C4022493C9C008DDD99 /* TikTakToeViewController.swift */; };
+		C0786C4322493CA5008DDD99 /* TikTakToeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0786C4222493CA5008DDD99 /* TikTakToeViewController.xib */; };
+		C0786C4622493CDE008DDD99 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0786C4522493CDE008DDD99 /* UIViewController+Extension.swift */; };
+		C0786C4A22493E5C008DDD99 /* TikTakToeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0786C4922493E5C008DDD99 /* TikTakToeCollectionViewCell.swift */; };
+		C0786C4C22493E77008DDD99 /* TikTakToeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0786C4B22493E77008DDD99 /* TikTakToeCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		C0786C3422493B3C008DDD99 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C0786C3722493B3C008DDD99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C0786C3922493B3C008DDD99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C0786C4022493C9C008DDD99 /* TikTakToeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TikTakToeViewController.swift; sourceTree = "<group>"; };
+		C0786C4222493CA5008DDD99 /* TikTakToeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TikTakToeViewController.xib; sourceTree = "<group>"; };
+		C0786C4522493CDE008DDD99 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		C0786C4922493E5C008DDD99 /* TikTakToeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TikTakToeCollectionViewCell.swift; sourceTree = "<group>"; };
+		C0786C4B22493E77008DDD99 /* TikTakToeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TikTakToeCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +64,8 @@
 		C0786C2C22493B3C008DDD99 /* SimpleGames */ = {
 			isa = PBXGroup;
 			children = (
+				C0786C4422493CD3008DDD99 /* Extensions */,
+				C0786C3F22493C21008DDD99 /* TikTakToe */,
 				C0786C2D22493B3C008DDD99 /* AppDelegate.swift */,
 				C0786C2F22493B3C008DDD99 /* ViewController.swift */,
 				C0786C3122493B3C008DDD99 /* Main.storyboard */,
@@ -62,6 +74,25 @@
 				C0786C3922493B3C008DDD99 /* Info.plist */,
 			);
 			path = SimpleGames;
+			sourceTree = "<group>";
+		};
+		C0786C3F22493C21008DDD99 /* TikTakToe */ = {
+			isa = PBXGroup;
+			children = (
+				C0786C4022493C9C008DDD99 /* TikTakToeViewController.swift */,
+				C0786C4222493CA5008DDD99 /* TikTakToeViewController.xib */,
+				C0786C4922493E5C008DDD99 /* TikTakToeCollectionViewCell.swift */,
+				C0786C4B22493E77008DDD99 /* TikTakToeCollectionViewCell.xib */,
+			);
+			path = TikTakToe;
+			sourceTree = "<group>";
+		};
+		C0786C4422493CD3008DDD99 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C0786C4522493CDE008DDD99 /* UIViewController+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +156,8 @@
 				C0786C3822493B3C008DDD99 /* LaunchScreen.storyboard in Resources */,
 				C0786C3522493B3C008DDD99 /* Assets.xcassets in Resources */,
 				C0786C3322493B3C008DDD99 /* Main.storyboard in Resources */,
+				C0786C4322493CA5008DDD99 /* TikTakToeViewController.xib in Resources */,
+				C0786C4C22493E77008DDD99 /* TikTakToeCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,6 +168,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0786C4A22493E5C008DDD99 /* TikTakToeCollectionViewCell.swift in Sources */,
+				C0786C4622493CDE008DDD99 /* UIViewController+Extension.swift in Sources */,
+				C0786C4122493C9C008DDD99 /* TikTakToeViewController.swift in Sources */,
 				C0786C3022493B3C008DDD99 /* ViewController.swift in Sources */,
 				C0786C2E22493B3C008DDD99 /* AppDelegate.swift in Sources */,
 			);
