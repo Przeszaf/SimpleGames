@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C0778029224A6F1400ED9A15 /* TikTakToeGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0778028224A6F1400ED9A15 /* TikTakToeGame.swift */; };
+		C077803A224A6F5500ED9A15 /* TikTakToeGameTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0778039224A6F5500ED9A15 /* TikTakToeGameTest.swift */; };
+		C077803C224A6F9D00ED9A15 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = C077803B224A6F9D00ED9A15 /* Player.swift */; };
 		C0786C2E22493B3C008DDD99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0786C2D22493B3C008DDD99 /* AppDelegate.swift */; };
 		C0786C3022493B3C008DDD99 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0786C2F22493B3C008DDD99 /* ViewController.swift */; };
 		C0786C3322493B3C008DDD99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0786C3122493B3C008DDD99 /* Main.storyboard */; };
@@ -19,7 +22,22 @@
 		C0786C4C22493E77008DDD99 /* TikTakToeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0786C4B22493E77008DDD99 /* TikTakToeCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		C0778033224A6F3900ED9A15 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C0786C2222493B3C008DDD99 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C0786C2922493B3C008DDD99;
+			remoteInfo = SimpleGames;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		C0778028224A6F1400ED9A15 /* TikTakToeGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TikTakToeGame.swift; sourceTree = "<group>"; };
+		C077802E224A6F3900ED9A15 /* SimpleGamesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleGamesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0778032224A6F3900ED9A15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C0778039224A6F5500ED9A15 /* TikTakToeGameTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TikTakToeGameTest.swift; sourceTree = "<group>"; };
+		C077803B224A6F9D00ED9A15 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		C0786C2A22493B3C008DDD99 /* SimpleGames.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleGames.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0786C2D22493B3C008DDD99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0786C2F22493B3C008DDD99 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +53,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C077802B224A6F3900ED9A15 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C0786C2722493B3C008DDD99 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -45,10 +70,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C077802F224A6F3900ED9A15 /* SimpleGamesTests */ = {
+			isa = PBXGroup;
+			children = (
+				C0778038224A6F4400ED9A15 /* TikTakToe */,
+				C0778032224A6F3900ED9A15 /* Info.plist */,
+			);
+			path = SimpleGamesTests;
+			sourceTree = "<group>";
+		};
+		C0778038224A6F4400ED9A15 /* TikTakToe */ = {
+			isa = PBXGroup;
+			children = (
+				C0778039224A6F5500ED9A15 /* TikTakToeGameTest.swift */,
+			);
+			path = TikTakToe;
+			sourceTree = "<group>";
+		};
 		C0786C2122493B3C008DDD99 = {
 			isa = PBXGroup;
 			children = (
 				C0786C2C22493B3C008DDD99 /* SimpleGames */,
+				C077802F224A6F3900ED9A15 /* SimpleGamesTests */,
 				C0786C2B22493B3C008DDD99 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -57,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				C0786C2A22493B3C008DDD99 /* SimpleGames.app */,
+				C077802E224A6F3900ED9A15 /* SimpleGamesTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -72,6 +116,7 @@
 				C0786C3422493B3C008DDD99 /* Assets.xcassets */,
 				C0786C3622493B3C008DDD99 /* LaunchScreen.storyboard */,
 				C0786C3922493B3C008DDD99 /* Info.plist */,
+				C077803B224A6F9D00ED9A15 /* Player.swift */,
 			);
 			path = SimpleGames;
 			sourceTree = "<group>";
@@ -83,6 +128,7 @@
 				C0786C4222493CA5008DDD99 /* TikTakToeViewController.xib */,
 				C0786C4922493E5C008DDD99 /* TikTakToeCollectionViewCell.swift */,
 				C0786C4B22493E77008DDD99 /* TikTakToeCollectionViewCell.xib */,
+				C0778028224A6F1400ED9A15 /* TikTakToeGame.swift */,
 			);
 			path = TikTakToe;
 			sourceTree = "<group>";
@@ -98,6 +144,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		C077802D224A6F3900ED9A15 /* SimpleGamesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C0778035224A6F3900ED9A15 /* Build configuration list for PBXNativeTarget "SimpleGamesTests" */;
+			buildPhases = (
+				C077802A224A6F3900ED9A15 /* Sources */,
+				C077802B224A6F3900ED9A15 /* Frameworks */,
+				C077802C224A6F3900ED9A15 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C0778034224A6F3900ED9A15 /* PBXTargetDependency */,
+			);
+			name = SimpleGamesTests;
+			productName = SimpleGamesTests;
+			productReference = C077802E224A6F3900ED9A15 /* SimpleGamesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		C0786C2922493B3C008DDD99 /* SimpleGames */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C0786C3C22493B3C008DDD99 /* Build configuration list for PBXNativeTarget "SimpleGames" */;
@@ -125,6 +189,10 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = Szafulski;
 				TargetAttributes = {
+					C077802D224A6F3900ED9A15 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = C0786C2922493B3C008DDD99;
+					};
 					C0786C2922493B3C008DDD99 = {
 						CreatedOnToolsVersion = 10.1;
 					};
@@ -144,11 +212,19 @@
 			projectRoot = "";
 			targets = (
 				C0786C2922493B3C008DDD99 /* SimpleGames */,
+				C077802D224A6F3900ED9A15 /* SimpleGamesTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C077802C224A6F3900ED9A15 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C0786C2822493B3C008DDD99 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -164,19 +240,37 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C077802A224A6F3900ED9A15 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C077803A224A6F5500ED9A15 /* TikTakToeGameTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C0786C2622493B3C008DDD99 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0778029224A6F1400ED9A15 /* TikTakToeGame.swift in Sources */,
 				C0786C4A22493E5C008DDD99 /* TikTakToeCollectionViewCell.swift in Sources */,
 				C0786C4622493CDE008DDD99 /* UIViewController+Extension.swift in Sources */,
 				C0786C4122493C9C008DDD99 /* TikTakToeViewController.swift in Sources */,
+				C077803C224A6F9D00ED9A15 /* Player.swift in Sources */,
 				C0786C3022493B3C008DDD99 /* ViewController.swift in Sources */,
 				C0786C2E22493B3C008DDD99 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C0778034224A6F3900ED9A15 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C0786C2922493B3C008DDD99 /* SimpleGames */;
+			targetProxy = C0778033224A6F3900ED9A15 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C0786C3122493B3C008DDD99 /* Main.storyboard */ = {
@@ -198,6 +292,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		C0778036224A6F3900ED9A15 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FYLQ4THTQD;
+				INFOPLIST_FILE = SimpleGamesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.szafulski.SimpleGamesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SimpleGames.app/SimpleGames";
+			};
+			name = Debug;
+		};
+		C0778037224A6F3900ED9A15 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FYLQ4THTQD;
+				INFOPLIST_FILE = SimpleGamesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.szafulski.SimpleGamesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SimpleGames.app/SimpleGames";
+			};
+			name = Release;
+		};
 		C0786C3A22493B3C008DDD99 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -353,6 +487,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C0778035224A6F3900ED9A15 /* Build configuration list for PBXNativeTarget "SimpleGamesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0778036224A6F3900ED9A15 /* Debug */,
+				C0778037224A6F3900ED9A15 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C0786C2522493B3C008DDD99 /* Build configuration list for PBXProject "SimpleGames" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

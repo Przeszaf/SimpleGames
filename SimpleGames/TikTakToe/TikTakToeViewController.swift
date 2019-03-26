@@ -18,6 +18,38 @@ class TikTakToeViewController: UIViewController, UICollectionViewDelegate, UICol
         }
     }
     
+    let firstPlayer: Player! = Player(name: "Przemek")
+    let secondPlayer: Player! = Player(name: "Daria")
+    var game: TikTakToeGame!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        game = TikTakToeGame(firstPlayer: firstPlayer, secondPlayer: secondPlayer)
+    }
+    
+    
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath) as! TikTakToeCollectionViewCell
+        if (game.isValidSelection(row: correctRow(from: indexPath), column: correctSection(from: indexPath))) {
+            if game.currentPlayer == firstPlayer {
+                cell.setCross()
+            } else {
+                cell.setCircle()
+            }
+            game.select(row: correctRow(from: indexPath), column: correctSection(from: indexPath))
+            switch game.isGameFinished() {
+            case .tie, .firstPlayer, .secondPlayer:
+                game.repeatGame()
+                collectionView.reloadData()
+            default:
+                print("Not tied yet")
+            }
+        
+        }
+    }
+
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 9
     }
@@ -28,15 +60,18 @@ class TikTakToeViewController: UIViewController, UICollectionViewDelegate, UICol
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TikTakToeCollectionViewCellIdentifier", for: indexPath) as! TikTakToeCollectionViewCell
-//        cell.setCross()
+        let num = game.board[correctRow(from: indexPath)][correctSection(from: indexPath)]
+        if num == 1 {
+            cell.setCross()
+        } else if num == 2 {
+            cell.setCircle()
+        } else {
+            cell.setClear()
+        }
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let cell = collectionView.cellForItem(at: indexPath) as! TikTakToeCollectionViewCell
-        cell.setCircle()
-    }
-    
+    //MARK: - CollectionViewLayout
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = (collectionView.bounds.size.width - 20) / 3
         return CGSize(width: width, height: width)
@@ -51,6 +86,15 @@ class TikTakToeViewController: UIViewController, UICollectionViewDelegate, UICol
     }
     
     
+    //MARK: - Private
+    
+    private func correctRow(from indexPath: IndexPath) -> Int {
+        return indexPath.row % 3
+    }
+    
+    private func correctSection(from indexPath: IndexPath) -> Int {
+        return indexPath.row / 3
+    }
     
     
     

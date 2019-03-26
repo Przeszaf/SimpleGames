@@ -9,7 +9,7 @@
 import UIKit
 
 class TikTakToeCollectionViewCell: UICollectionViewCell {
-    private var animatedLayer: CAShapeLayer?
+    private var addedLayer: CAShapeLayer?
     
     func setCross() {
         let bezierPath = UIBezierPath()
@@ -28,6 +28,7 @@ class TikTakToeCollectionViewCell: UICollectionViewCell {
         animation.fromValue = 0
         animation.duration = 0.5
         shapeLayer.add(animation, forKey: "MyAnimation")
+        addedLayer = shapeLayer
     }
     
     func setCircle() {
@@ -45,12 +46,14 @@ class TikTakToeCollectionViewCell: UICollectionViewCell {
         animation.fromValue = 0
         animation.duration = 0.5
         shapeLayer.add(animation, forKey: "MyAnimation")
-        
+        addedLayer = shapeLayer
     }
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    func setClear() {
+        addedLayer?.removeAllAnimations()
+        addedLayer?.removeFromSuperlayer()
     }
+    
     
     static func register(for collectionView: UICollectionView)  {
         let cellName = String(describing: self)
